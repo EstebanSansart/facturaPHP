@@ -1,33 +1,33 @@
-let detailContainer = document.querySelector('.details');
-let sendButton = document.querySelector('#send');
+let divDetails = document.querySelector('.body-detail');
+let btnBuy = document.querySelector('#buy');
 let items=[];
-document.querySelector('#add').addEventListener('click', (e) => {
-    detailContainer.insertAdjacentHTML('beforeend',newItemHTML());
+document.querySelector('#addItem').addEventListener('click', (e) => {
+    divDetails.insertAdjacentHTML('beforeend',crearItemHTML());
 });
-detailContainer.addEventListener("click", (e)=>{
-    let box = document.getElementById(`txt${e.target.dataset.id}`);
-    if(e.target.name == "less"){
-        if(Number(box.value)<=0){
-            deleteItem(e.target.dataset.id);
+divDetails.addEventListener("click", (e)=>{
+    let cja = document.getElementById(`txt${e.target.dataset.id}`);
+    if(e.target.name == "btnRemove"){
+        if(Number(cja.value)<=0){
+            eliminarItemLista(e.target.dataset.id);
         }else{
-            box.value = Number(box.value) - 1;
-        } 
-    }else if(e.target.name == "plus"){
-        box.value = Number(box.value) + 1;
+            cja.value = Number(cja.value) - 1;
+        };
+    }else if(e.target.name == "btnAdd"){
+        cja.value = Number(cja.value) + 1;
     };
 });
-deleteItem = (idIdx) =>{
-    let products = document.querySelectorAll(".formDetail");
-    products.forEach((item) => {
+eliminarItemLista = (idIdx) =>{
+    let productos = document.querySelectorAll(".frmDataDetail");
+    productos.forEach((item) => {
         if(item.id == idIdx){
                 item.remove();
         };
     });
 };
-newItemHTML = () => {
+crearItemHTML = () => {
     let id = Date.now().toString(16);
-    let facturaHTML = /* html */ `
-            <form id="${id}" class="formDetail">
+    let facturaHTML = `
+            <form id="${id}" class="frmDataDetail">
                 <div class="row g-1  row-cols-xl-6 row-cols-sm-4">
                     <div class="col">
                         <div class="mb-2">
@@ -48,10 +48,10 @@ newItemHTML = () => {
                         </div>
                     </div>
                     <div class="col-1 col-sm-6  text-sm-center text-xl-start p-2 ">
-                        <button type="button" class="btn w-100 h-100 btn-success" data-id="${id}" name="plus">+</button>
+                        <button type="button" class="btn w-100 h-100 btn-success" data-id="${id}" name="btnAdd">+</button>
                     </div>
                     <div class="col-1 col-sm-6  text-sm-center text-xl-start p-2">
-                        <button type="button" class="btn w-100 h-100 btn-danger" data-id="${id}" name="less">-</button>
+                        <button type="button" class="btn w-100 h-100 btn-danger" data-id="${id}" name="btnRemove">-</button>
                     </div>
                 </div>
             </form>

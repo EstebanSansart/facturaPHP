@@ -1,19 +1,14 @@
 {
-  "posts": [
+  "factura": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "nro" : 1,
+      "fecha" : "24/05/2023",
+      "vendedor" : "Johlver Pardo",
+      "cc" : "1095298081",
+      "nombre" : "Julian Sanabria",
+      "email" : "julianestebansanabria@gmail.com",
+      "direccion" : "cra 8w #62-12",
+      "telefono" : 3005288205
     }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

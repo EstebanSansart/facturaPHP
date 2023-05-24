@@ -1,18 +1,66 @@
-<div class="encabezado">
-    <div class="mb-3" id="numFactura">
-        <label for="formGroupExampleInput" class="form-label">Bill Number</label>
-        <input type="number" class="form-control" id="formGroupExampleInput" placeholder="0000">
-    </div>
-    <div class="mb-3" id="fecha">
-        <label for="formGroupExampleInput" class="form-label">Date</label>
-        <input type="date" class="form-control" id="formGroupExampleInput">
-    </div>
-    <div class="mb-3 col-12" id="nombre">
-        <label for="formGroupExampleInput" class="form-label">Full Name</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Johlver Pardo">
-    </div>
-    <div class="mb-3" id="cedula">
-        <label for="formGroupExampleInput" class="form-label">C.C.</label>
-        <input type="number" class="form-control" id="formGroupExampleInput" placeholder="1085345897">
+<div class="container encabezado-factura">
+    <h2>Encabezado de facturas</h2>
+    <div class="row">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-3">
+                    <div class="mb-3">
+                        <label for="nro_factura" class="form-label">Nro de factura</label>
+                        <input type="number" class="form-control" id="nro_factura" name="nro_factura">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="mb-3">
+                        <label for="fecha_factura" class="form-label">Fecha de factura</label>
+                        <input type="date" class="form-control" id="fecha_factura" name="fecha_factura">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="vendedor" class="form-label">Vendedor</label>
+                        <input type="text" class="form-control" id="vendedor" name="vendedor">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <div class="mb-3">
+                        <label for="nro_factura" class="form-label">Nro Identificacion cliente</label>
+                        <input type="number" class="form-control" id="nro_factura" name="nro_factura">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="nombre_cliente" class="form-label">Nombres y apellidos</label>
+                        <input type="text" class="form-control" id="nombre_cliente" name="nombre_cliente">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo Electronico</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="direccion" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" id="direccion" name="direccion">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="tel_contacto" class="form-label">Telefono de contacto</label>
+                        <input type="number" class="form-control" id="tel_contacto" name="tel_contacto">
+                    </div>
+                </div>
+                <div class="row mb-3 mt-3">
+                    <div class="col-12">
+                        <button type="button" class="btn btn-danger" id="addItem">Add Invoice(+)</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
