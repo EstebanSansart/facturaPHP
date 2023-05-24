@@ -9,9 +9,5 @@
 
     <label for="cantidad"> Cantidad: </label>
     <input type="number" name="cantidad" id="cantidad" required><br><br>
-
-    <button type="submit" value="plus"> + </button>
-    <button type="submit" value="crearFactura"> Factura </button>
     
 </form>
-
